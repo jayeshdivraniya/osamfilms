@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osam films/Studio | Videography & Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <style>
+    /* ====== BASIC RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ====== HEADER / NAVBAR ====== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: #ffcc00;
+    }
+
+    nav ul {
+      list-style: none;
+      display:flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      min-height: 100vh;
+      background: url('hero.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+      color: #f1f1f1;
+    }
+
+    .hero button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* ====== ABOUT SECTION ====== */
+    .about {
+      padding: 5rem 5%;
+      background: #141414;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #222;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+      text-align: left;
+    }
+
+    .about-text h2 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    /* ====== PORTFOLIO SECTION ====== */
+    .portfolio {
+      padding: 5rem 5%;
+      text-align: center;
+      background: #0d0d0d;
+    }
+
+    .portfolio h2 {
+      color: #ffcc00;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #222;
+      object-fit: cover;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ====== SERVICES SECTION ====== */
+    .services {
+      padding: 5rem 5%;
+      background: #141414;
+      text-align: center;
+    }
+
+    .services h2 {
+      color: #ffcc00;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .service-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 280px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #222;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #222;
+    }
+
+    .card h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    /* ====== CONTACT SECTION ====== */
+    .contact {
+      padding: 5rem 5%;
+      background: #0d0d0d;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #ffcc00;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+    }
+
+    button[type="submit"] {
+      background: #ffcc00;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button[type="submit"]:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: #141414;
+      padding: 20px;
+      text-align: center;
+      color: #999;
+    }
+
+    footer a {
+      color: #ffcc00;
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media(max-width: 992px) {
+      .hero h2 { font-size: 2.5rem; }
+      header { flex-direction: column; padding: 15px 2rem; }
+      nav ul { gap: 10px; }
+      .about-text { text-align: center; }
+    }
+
+    @media(max-width: 600px) {
+      .hero h2 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      .about { padding: 3rem 1.5rem; }
+      .services { padding: 3rem 1.5rem; }
+      .portfolio { padding: 3rem 1.5rem; }
+      .contact { padding: 3rem 1.5rem; }
+      header h1 { font-size: 1.4rem; }
+    }
+  </style> -->
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Osam Films</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <h2>Capturing Life’s Best Frames</h2>
+    <p>Professional Videography & Photography services for weddings, brands, and memories that last forever.</p>
+    <button>View Our Work</button>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <!-- <img src="about.jpg" alt="About us"> -->
+    <div class="about-text">
+      <h2>About Our Studio</h2>
+      <p>We’re a passionate team of photographers and videographers dedicated to turning moments into masterpieces. From cinematic wedding films to creative photo shoots, we bring stories to life through our lens.</p>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="portfolio" id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="gallery">
+      <img src="osm1.jpg" alt="Portfolio Image">
+      <img src="osm2.jpg" alt="Portfolio Image">
+      <img src="osm4.jpg" alt="Portfolio Image">
+      <img src="osm3.jpg" alt="Portfolio Image">
+   
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div class="card">
+        <h3>Wedding Photography</h3>
+        <p>Capture your most special day with timeless and emotional photography.</p>
+      </div>
+      <div class="card">
+        <h3>Cinematic Videography</h3>
+        <p>We create cinematic experiences that tell your story beautifully.</p>
+      </div>
+      <div class="card">
+        <h3>Product Shoots</h3>
+        <p>Showcase your brand with high-quality professional product photography.</p>
+      </div>
+      <div class="card">
+        <h3>Drone Footage</h3>
+        <p>Get breathtaking aerial views with our expert drone videographers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <!-- <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form> -->
+    <p style="margin-top:20px;">📍 Junagadh,Gujrat,India | 📞 +91 1223334444 | 📧osam@gmail.com </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Osam films/Studio | All Rights Reserved | Follow us on 
+      <a href="https://www.instagram.com/osam_films/">Instagram</a> & <a href="https://www.youtube.com/@osamfilmsind1997">YouTube</a>
+    </p>
+  </footer>
+</body>
+</html>
