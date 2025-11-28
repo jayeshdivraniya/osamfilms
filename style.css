@@ -211,21 +211,46 @@ strong {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;                 
+  overflow-x: auto;           
   gap: 1.5rem;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* ==== Scrollbar Styling ==== */
+.gallery::-webkit-scrollbar {
+  height: 6px;                /* thin scrollbar */
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: #222;           /* dark track */
+  border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: #a7ac05;        /* light yellow */
+  border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar-thumb:hover {
+  background: #ffcc00;        /* brighter yellow on hover */
 }
 
 .gallery img {
-  width: 100%;
+  min-width: 250px;            
+  height: 430px;             
+  object-fit: cover;          
   border-radius: 10px;
   transition: 0.3s;
   box-shadow: 0 0 10px #222;
+  flex-shrink: 0;               
 }
 
 .gallery img:hover {
   transform: scale(1.05);
 }
+
 
 /* ===== SERVICES ===== */
 .services {
